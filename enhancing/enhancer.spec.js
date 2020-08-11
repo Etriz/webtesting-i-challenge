@@ -27,4 +27,7 @@ describe("enhancement fns", () => {
     item.enhancement = 15;
     expect(enhancer.fail(item)).toStrictEqual({ ...item, durability: 10 });
   });
+  test("get name", () => {
+    expect(enhancer.get(item)).toStrictEqual({ ...item, name: `[+10] Great Sword` });
+  });
 });

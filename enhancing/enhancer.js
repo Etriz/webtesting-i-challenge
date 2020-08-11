@@ -31,5 +31,8 @@ function fail(item) {
 }
 
 function get(item) {
-  return { ...item };
+  let newItem = { ...item };
+  if (newItem.enhancement !== 0) {
+    return { ...newItem, name: `[+${newItem.enhancement}] ${newItem.name}` };
+  } else return newItem;
 }
