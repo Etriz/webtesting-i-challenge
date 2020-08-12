@@ -13,7 +13,7 @@ function repair(item) {
 
 function success(item) {
   let newItem = { ...item };
-  newItem.enhancement !== 20 ? (newItem.enhancement += 1) : null;
+  newItem.enhancement !== 20 ? (newItem.enhancement += 1) : newItem.enhancement;
   return newItem;
 }
 
